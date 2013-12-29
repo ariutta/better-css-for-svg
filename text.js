@@ -70,14 +70,14 @@ betterCssForSvg.text = function(){
     // using padding of parentElement.
 
     if (textAlign === 'left') {
-      dx = parentElementPaddingInPixels + (-1)*bBox.x;
+      dx = parentElementPaddingInPixels;
     }
     else {
       if (textAlign === 'right') {
-        dx = parentElementBBox.width - (parentElementPaddingInPixels + bBox.width) + (-1)*bBox.x;
+        dx = parentElementBBox.width - (parentElementPaddingInPixels + bBox.width);
       }
       else {
-        dx = parentElementBBox.width / 2 + (-1)*bBox.x;
+        dx = parentElementBBox.width / 2;
       }
     }
 
@@ -95,15 +95,15 @@ betterCssForSvg.text = function(){
     //
     // http://css-tricks.com/what-is-vertical-align/
     if (verticalAlign === 'middle') {
-      dy = ((parentElementBBox.height / 2) + bBox.height/2) + (-1)*bBox.y;
+      dy = ((parentElementBBox.height / 2) + bBox.height/2);
     }
     else {
       if (verticalAlign === 'top' || verticalAlign === 'super' || verticalAlign === 'text-top') {
-        dy = parentElementPaddingInPixels + bBox.height + (-1)*bBox.y;
+        dy = parentElementPaddingInPixels;
       }
       else {
         if (verticalAlign === 'bottom' || verticalAlign === 'baseline' || verticalAlign === 'sub' || verticalAlign === 'text-bottom') {
-          dy = parentElementBBox.height - (parentElementPaddingInPixels + bBox.height) + (-1)*bBox.y;
+          dy = parentElementBBox.height - (parentElementPaddingInPixels + bBox.height);
         }
         else {
           dy = 0;
